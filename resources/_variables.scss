@@ -1,14 +1,15 @@
 @mixin btn-primary {
-    text-transform: uppercase;
-    color: white;
-    background-color: #00b289;
+    display: block;
     padding: 0.75rem 2rem;
-    letter-spacing: 1px;
-    border-radius: 5px;
-    font-weight: 900;
-    font-size: 0.75rem;
     margin-left: 1rem;
+    font-size: 0.75rem;
+    font-weight: 900;
+    color: white;
     text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: #00b289;
+    border-radius: 5px;
 }
 
 $primary-color:#00b289;

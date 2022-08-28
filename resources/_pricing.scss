@@ -1,0 +1,170 @@
+@use 'variables';
+
+.pricing{
+    margin-top: 10rem;
+}
+    .wrapper{
+        max-width: 70rem;
+        margin: auto;
+    }
+        .heading_wrapper{
+            display: flex;
+            gap: clamp(1rem, 5vw, 7rem);
+            align-items: center;
+            justify-content: center;
+            padding: 0 1rem;
+            margin: 2rem 0;
+        }
+            .heading{
+                font-family: 'Merriweather';
+                font-size: clamp(1.5rem, 5vw, 2.5rem);
+                font-weight: 700;
+            }
+            /*  */
+        .card-wrapper{
+            @media (min-width: 768px) {
+                display: flex;
+            }
+        }
+        .card{
+            padding: 0 clamp(1rem, 5vw, 3rem);
+            margin: 2rem 1rem;
+            border: 1px solid #999;
+            border-radius: 5px;
+        }
+            .pack_name{
+                margin-top: 3rem;
+                margin-bottom: .25rem;
+                font-size: 1.25rem;
+                
+            }
+            .pack_description{
+                margin-bottom: 1.5rem;
+                font-weight: 300;
+            }
+            .price{
+                position: relative;
+                display: block;
+                text-transform: uppercase;
+            }
+                .currency{
+                    position: absolute;
+                    top: 1rem;
+                    font-size: 2rem;
+                    font-weight: 400;
+                }
+                .number{
+                    margin-left: 1.5rem;
+                    font-size: 4rem;
+                    font-weight: 900;
+                }
+                .recurring{
+                    margin-left: 2rem;
+                    font-size: 1.5rem;
+                }
+            .hr{
+                margin-bottom: 2rem;
+                border: 1px solid variables.$primary-color;
+            }
+            .FeatureList{
+                margin-left: 1rem;
+                list-style-image: url('./tick.svg');
+            }
+                .FeatureItem{
+                    padding-left: 1rem;
+                    margin-bottom: 1.25rem
+                }
+
+            .btn-primary{
+                @include variables.btn-primary();
+                padding: 1.75rem 0;
+                margin: 3rem auto;
+                font-size: .90rem;
+                text-align: center;
+                vertical-align: baseline;
+            }
+
+
+
+/* *** SWITCH *** */
+
+.switch_wrapper{
+    position: relative;
+    display: flex;
+    gap: clamp(1rem, 3vw, 2rem);
+    align-items: center;
+}
+
+.free{
+    position: absolute;
+    top: -2rem;
+    right: -1rem;
+    font-size: .75rem;
+    font-weight: 700;
+    color: variables.$primary-color;
+    text-transform: uppercase;
+}
+
+.switch_desc{
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input {
+    width: 0;
+    height: 0; 
+    opacity: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    bottom: 4px;
+    left: 4px;
+    width: 26px;
+    height: 26px;
+    content: "";
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: variables.$primary-color;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px variables.$primary-color;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
