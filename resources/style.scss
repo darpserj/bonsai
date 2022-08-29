@@ -1,4 +1,10 @@
 @use './resets';
 @use './variables';
 @use './nav';
-@use './pricing'
+@use './pricing';
+@use './addons';
+
+.wrapper{
+    max-width: 75rem;
+    margin: auto;
+}
